@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ServicesSection } from './components/ServicesSection';
 import { AboutSection } from './components/AboutSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 import { GeminiPlanner } from './components/GeminiPlanner';
 import { ContactFooter } from './components/ContactFooter';
 
@@ -31,6 +32,11 @@ const App: React.FC = () => {
 
         <section id="about" className="bg-slate-100 py-16 md:py-24">
           <AboutSection />
+        </section>
+
+        {/* Testimonials */}
+        <section id="reviews" className="py-16 md:py-24 bg-slate-50">
+          <TestimonialsSection />
         </section>
 
         {/* AI Feature */}
