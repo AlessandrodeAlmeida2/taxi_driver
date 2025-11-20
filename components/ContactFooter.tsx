@@ -15,10 +15,14 @@ export const ContactFooter: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to backend. 
-    // Here we construct a WhatsApp URL
+    
+    // Format the message for WhatsApp
     const text = `Olá, meu nome é ${formData.name}. Gostaria de informações sobre ${formData.service}. Mensagem: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/5500000000000?text=${encodeURIComponent(text)}`;
+    
+    // Target number: (19) 99194-4137 -> 5519991944137
+    const phoneNumber = "5519991944137";
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -41,7 +45,7 @@ export const ContactFooter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Telefone / WhatsApp</h4>
-                  <p className="text-slate-300 mt-1">(XX) 99999-9999</p>
+                  <p className="text-slate-300 mt-1 font-mono text-lg">(19) 99194-4137</p>
                   <p className="text-slate-400 text-sm">Atendimento 24h para emergências</p>
                 </div>
               </div>
@@ -62,7 +66,7 @@ export const ContactFooter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Ponto Base</h4>
-                  <p className="text-slate-300 mt-1">Praça Central, S/N - Centro</p>
+                  <p className="text-slate-300 mt-1">Espírito Santo do Pinhal e Região</p>
                 </div>
               </div>
             </div>
@@ -105,7 +109,7 @@ export const ContactFooter: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
-                  placeholder="(XX) 99999-9999"
+                  placeholder="(19) 99999-9999"
                 />
               </div>
 
@@ -121,9 +125,9 @@ export const ContactFooter: React.FC = () => {
                   <option value="Transfer">Traslado Aeroporto</option>
                   <option value="WineTour">Tour de Vinícolas</option>
                   <option value="CoffeeTour">Rota do Café</option>
+                  <option value="Gastronomy">Turismo Gastronômico</option>
                   <option value="CityTour">City Tour</option>
                   <option value="Intercity">Viagem Intermunicipal</option>
-                  <option value="Other">Outro</option>
                 </select>
               </div>
 
