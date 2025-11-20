@@ -1,8 +1,16 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 
-// Initialize client
-// Ensure process.env.API_KEY is available in the environment
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize client lazily to prevent top-level crashes if env vars aren't ready
+let ai: GoogleGenAI | null = null;
+
+const getAiClient = () => {
+  if (!ai) {
+    // API Key usage
+    // The key must be obtained exclusively from process.env.API_KEY
+    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  }
+  return ai;
+};
 
 const SYSTEM_INSTRUCTION = `
 Você é um assistente virtual amigável e experiente da "Família Silva Táxi & Turismo".
@@ -25,7 +33,8 @@ let chatSession: Chat | null = null;
 
 export const getChatSession = (): Chat => {
   if (!chatSession) {
-    chatSession = ai.chats.create({
+    const client = getAiClient();
+    chatSession = client.chats.create({
       model: 'gemini-2.5-flash',
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
@@ -43,6 +52,6 @@ export const sendMessageToAssistant = async (message: string): Promise<string> =
     return result.text || "Desculpe, não consegui processar sua resposta agora.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    throw new Error("Falha na comunicação com o assistente.");
+    return "Desculpe, estou tendo dificuldades de conexão no momento. Por favor, tente novamente em alguns instantes ou nos chame no WhatsApp!";
   }
 };
