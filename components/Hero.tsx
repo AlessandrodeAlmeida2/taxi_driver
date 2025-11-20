@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop" 
-          alt="Vista da Serra da Mantiqueira" 
+          alt="Vista da Serra em Espírito Santo do Pinhal" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/30"></div>
@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl font-light leading-relaxed shadow-black/50 drop-shadow-md">
-            Experiências exclusivas em vinícolas premiadas, fazendas de café centenárias e turismo gastronômico, guiados por quem tem tradição na região.
+            Experiências exclusivas nas melhores vinícolas, fazendas de café centenárias e turismo gastronômico da Toscana Paulista.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">

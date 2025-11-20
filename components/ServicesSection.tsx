@@ -6,42 +6,42 @@ const services: ServiceItem[] = [
   {
     id: 1,
     title: "Tour de Vinícolas",
-    description: "Passeio guiado pelas melhores adegas da Mantiqueira. Degustação de vinhos de inverno sem a preocupação de dirigir.",
+    description: "Passeio guiado pelas melhores adegas de Espírito Santo do Pinhal. Degustação de vinhos de inverno sem a preocupação de dirigir.",
     icon: <Wine size={32} className="text-primary-600" />,
     imageUrl: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
     title: "Rota do Café",
-    description: "Visite fazendas históricas, conheça o processo de colheita e deguste cafés especiais premiados direto da fonte.",
+    description: "Visite fazendas históricas da região, conheça o processo de colheita e deguste cafés especiais premiados direto da fonte.",
     icon: <Coffee size={32} className="text-primary-600" />,
     imageUrl: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 3,
     title: "Traslados Aeroporto",
-    description: "Recepção no desembarque e transporte seguro até seu hotel ou evento. Pontualidade garantida.",
+    description: "Recepção no desembarque e transporte seguro até Espírito Santo do Pinhal. Pontualidade garantida.",
     icon: <Plane size={32} className="text-primary-600" />,
     imageUrl: "https://picsum.photos/seed/airport/600/400"
   },
   {
     id: 4,
     title: "Turismo Gastronômico",
-    description: "Te levamos às melhores experiências, incluindo a famosa culinária italiana em Espírito Santo do Pinhal.",
+    description: "Te levamos às melhores experiências, incluindo a famosa culinária italiana e restaurantes da região.",
     icon: <Utensils size={32} className="text-primary-600" />,
     imageUrl: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 5,
-    title: "City Tour",
-    description: "Conheça os principais pontos turísticos, mirantes e a história da cidade com nossos motoristas guias.",
+    title: "City Tour Pinhal",
+    description: "Conheça os principais pontos turísticos, igrejas históricas e a beleza arquitetônica de Espírito Santo do Pinhal.",
     icon: <Map size={32} className="text-primary-600" />,
     imageUrl: "https://picsum.photos/seed/city/600/400"
   },
   {
     id: 6,
     title: "Viagens Intermunicipais",
-    description: "Conforto total para viagens longas para cidades vizinhas ou capitais. Preços fechados e competitivos.",
+    description: "Conforto total para viagens saindo de Pinhal para cidades vizinhas ou capitais. Preços fechados e competitivos.",
     icon: <Building2 size={32} className="text-primary-600" />,
     imageUrl: "https://picsum.photos/seed/highway/600/400"
   }
@@ -53,10 +53,10 @@ export const ServicesSection: React.FC = () => {
       <div className="text-center mb-16">
         <h2 className="text-primary-600 font-semibold tracking-wide uppercase text-sm">Nossos Serviços</h2>
         <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-          Excelência em Mobilidade e Turismo
+          Excelência em Mobilidade na Região
         </h3>
         <p className="mt-4 max-w-2xl text-xl text-slate-500 mx-auto">
-          Seja a negócios ou lazer, a família D'Alvia Vicente cuida do seu transporte para que você aproveite o melhor da viagem.
+          Seja a negócios ou lazer, a família D'Alvia Vicente cuida do seu transporte para que você aproveite o melhor de Espírito Santo do Pinhal.
         </p>
       </div>
 

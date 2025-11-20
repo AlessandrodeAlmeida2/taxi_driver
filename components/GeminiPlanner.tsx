@@ -9,14 +9,18 @@ export const GeminiPlanner: React.FC = () => {
     {
       id: 'welcome',
       role: 'model',
-      text: 'Olá! Eu sou o assistente virtual da Família D\'Alvia Vicente. Posso sugerir roteiros de vinhos, cafés ou passeios pela cidade. Como posso ajudar no seu planejamento hoje?'
+      text: 'Olá! Eu sou o assistente virtual da Família D\'Alvia Vicente. Posso sugerir roteiros de vinhos, cafés ou passeios por Espírito Santo do Pinhal. Como posso ajudar?'
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  // Ref for the container instead of a bottom element to prevent page scroll jank
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -76,7 +80,7 @@ export const GeminiPlanner: React.FC = () => {
           Concierge Virtual Inteligente
         </h2>
         <p className="mt-4 text-lg text-slate-500">
-          Não sabe onde ir? Pergunte ao nosso assistente com inteligência artificial. Peça sugestões de vinícolas românticas, passeios para família ou onde almoçar.
+          Não sabe onde ir em Espírito Santo do Pinhal? Pergunte ao nosso assistente. Peça sugestões de vinícolas, restaurantes ou cafés.
         </p>
       </div>
 
@@ -88,12 +92,15 @@ export const GeminiPlanner: React.FC = () => {
           </div>
           <div>
             <h3 className="text-white font-medium">Assistente de Roteiros</h3>
-            <p className="text-indigo-200 text-xs">Online agora • Powered by Gemini</p>
+            <p className="text-indigo-200 text-xs">Online agora • Especialista em Pinhal</p>
           </div>
         </div>
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        <div 
+          ref={chatContainerRef}
+          className="flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth"
+        >
           {messages.map((msg) => (
             <div
               key={msg.id}
@@ -132,7 +139,6 @@ export const GeminiPlanner: React.FC = () => {
               </div>
             </div>
           )}
-          <div ref={messagesEndRef} />
         </div>
 
         {/* Input Area */}
@@ -142,7 +148,7 @@ export const GeminiPlanner: React.FC = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Ex: Quero visitar uma vinícola que sirva almoço..."
+              placeholder="Ex: Qual vinícola fica mais perto do centro?"
               className="flex-1 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 resize-none py-2 px-3 min-h-[44px] max-h-32"
               rows={1}
             />
