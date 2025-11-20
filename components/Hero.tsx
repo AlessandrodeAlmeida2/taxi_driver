@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
-            Explore a Espírito Santo do Pinhal com a<br />
+            Explore Espírito Santo do Pinhal com a<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200">
               Família D'Alvia Vicente
             </span>
