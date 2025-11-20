@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
               <CarTaxiFront size={24} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-800 leading-none">Família Silva</h1>
+              <h1 className="text-xl font-bold text-slate-800 leading-none">D'Alvia Vicente</h1>
               <p className="text-xs text-primary-600 font-semibold tracking-wider">TÁXI & TURISMO</p>
             </div>
           </div>

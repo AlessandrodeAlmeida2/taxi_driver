@@ -9,7 +9,7 @@ export const GeminiPlanner: React.FC = () => {
     {
       id: 'welcome',
       role: 'model',
-      text: 'Olá! Eu sou o assistente virtual da Família Silva. Posso sugerir roteiros de vinhos, cafés ou passeios pela cidade. Como posso ajudar no seu planejamento hoje?'
+      text: 'Olá! Eu sou o assistente virtual da Família D\'Alvia Vicente. Posso sugerir roteiros de vinhos, cafés ou passeios pela cidade. Como posso ajudar no seu planejamento hoje?'
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);

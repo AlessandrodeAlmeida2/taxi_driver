@@ -31,7 +31,7 @@ export const ContactFooter: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-primary-500">Fale Conosco</h2>
             <p className="text-slate-400 mb-8 text-lg">
-              Estamos prontos para atendê-lo. Entre em contato para agendamentos, orçamentos ou dúvidas sobre nossos roteiros.
+              Estamos prontos para atendê-lo. Entre em contato para agendamentos, orçamentos ou dúvidas sobre nossos roteiros na Mantiqueira.
             </p>
             
             <div className="space-y-6">
@@ -52,7 +52,7 @@ export const ContactFooter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Email</h4>
-                  <p className="text-slate-300 mt-1">contato@familiasilvataxi.com.br</p>
+                  <p className="text-slate-300 mt-1">contato@dalviavicente.com.br</p>
                 </div>
               </div>
 
@@ -61,7 +61,7 @@ export const ContactFooter: React.FC = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium">Ponto de Táxi Base</h4>
+                  <h4 className="text-lg font-medium">Ponto Base</h4>
                   <p className="text-slate-300 mt-1">Praça Central, S/N - Centro</p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export const ContactFooter: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Família Silva Táxi & Turismo. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} D'Alvia Vicente Táxi & Turismo. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

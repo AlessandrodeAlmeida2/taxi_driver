@@ -7,11 +7,11 @@ export const Hero: React.FC = () => {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://picsum.photos/seed/roadtrip/1920/1080" 
-          alt="Estrada cênica" 
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop" 
+          alt="Vista da Serra da Mantiqueira" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/30"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
@@ -25,14 +25,14 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
-            Descubra a região com quem <br />
+            Explore a Mantiqueira com a<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200">
-              realmente conhece
+              Família D'Alvia Vicente
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl font-light leading-relaxed">
-            Muito mais que um táxi. A Família Silva oferece experiências personalizadas em vinícolas, fazendas de café e traslados executivos com segurança e conforto.
+          <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl font-light leading-relaxed shadow-black/50 drop-shadow-md">
+            Experiências exclusivas em vinícolas premiadas, fazendas de café centenárias e turismo gastronômico, guiados por quem tem tradição na região.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
               className="px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-bold text-lg shadow-lg hover:shadow-primary-500/40 transition-all flex items-center justify-center gap-2"
             >
               <MapPin size={20} />
-              Agendar Corrida
+              Agendar Passeio
             </a>
             <a 
               href="#planner"

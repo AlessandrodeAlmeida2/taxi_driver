@@ -10,14 +10,14 @@ export const AboutSection: React.FC = () => {
           <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary-900/10 rounded-full opacity-50 blur-xl"></div>
           <img 
             src="https://picsum.photos/seed/driver/800/1000" 
-            alt="Motorista da Família Silva" 
+            alt="Motorista da Família D'Alvia Vicente" 
             className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]"
           />
           <div className="absolute bottom-8 left-8 right-8 bg-white/95 p-6 rounded-xl shadow-lg backdrop-blur-sm">
             <p className="text-slate-800 italic font-medium">
               "Para nós, cada passageiro é um amigo da família. Segurança e hospitalidade são nossa herança."
             </p>
-            <p className="mt-2 text-primary-600 font-bold">— Carlos Silva, Fundador</p>
+            <p className="mt-2 text-primary-600 font-bold">— Família D'Alvia Vicente</p>
           </div>
         </div>
 
@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
             Tradição familiar a serviço do seu conforto
           </h2>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            Há mais de 20 anos nas estradas da região, a Família Silva construiu uma reputação sólida baseada na confiança. Não somos apenas um aplicativo anônimo; somos profissionais dedicados que conhecem cada curva da estrada e cada história local.
+            Há mais de 20 anos nas estradas da Serra da Mantiqueira, a Família D'Alvia Vicente construiu uma reputação sólida baseada na confiança. Não somos apenas um aplicativo anônimo; somos profissionais dedicados que conhecem cada curva da estrada e cada história local.
           </p>
 
           <div className="space-y-6">

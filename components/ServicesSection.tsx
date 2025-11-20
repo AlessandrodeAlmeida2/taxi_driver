@@ -6,16 +6,16 @@ const services: ServiceItem[] = [
   {
     id: 1,
     title: "Tour de Vinícolas",
-    description: "Passeio guiado pelas melhores adegas da região. Degustação sem a preocupação de dirigir.",
+    description: "Passeio guiado pelas melhores adegas da Mantiqueira. Degustação de vinhos de inverno sem a preocupação de dirigir.",
     icon: <Wine size={32} className="text-primary-600" />,
-    imageUrl: "https://picsum.photos/seed/vineyard/600/400"
+    imageUrl: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
     title: "Rota do Café",
-    description: "Visite fazendas históricas, conheça o processo de colheita e deguste cafés premiados.",
+    description: "Visite fazendas históricas, conheça o processo de colheita e deguste cafés especiais premiados direto da fonte.",
     icon: <Coffee size={32} className="text-primary-600" />,
-    imageUrl: "https://picsum.photos/seed/coffeebeans/600/400"
+    imageUrl: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 3,
@@ -27,21 +27,21 @@ const services: ServiceItem[] = [
   {
     id: 4,
     title: "Turismo Gastronômico",
-    description: "Te levamos aos restaurantes mais renomados e aos segredos culinários escondidos da cidade.",
+    description: "Te levamos às melhores experiências, incluindo a famosa culinária italiana em Espírito Santo do Pinhal.",
     icon: <Utensils size={32} className="text-primary-600" />,
-    imageUrl: "https://picsum.photos/seed/food/600/400"
+    imageUrl: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 5,
     title: "City Tour",
-    description: "Conheça os principais pontos turísticos e a história da cidade com nossos motoristas guias.",
+    description: "Conheça os principais pontos turísticos, mirantes e a história da cidade com nossos motoristas guias.",
     icon: <Map size={32} className="text-primary-600" />,
     imageUrl: "https://picsum.photos/seed/city/600/400"
   },
   {
     id: 6,
     title: "Viagens Intermunicipais",
-    description: "Conforto total para viagens longas para cidades vizinhas ou capitais. Preços fechados.",
+    description: "Conforto total para viagens longas para cidades vizinhas ou capitais. Preços fechados e competitivos.",
     icon: <Building2 size={32} className="text-primary-600" />,
     imageUrl: "https://picsum.photos/seed/highway/600/400"
   }
@@ -56,7 +56,7 @@ export const ServicesSection: React.FC = () => {
           Excelência em Mobilidade e Turismo
         </h3>
         <p className="mt-4 max-w-2xl text-xl text-slate-500 mx-auto">
-          Seja a negócios ou lazer, nossa família cuida do seu transporte para que você aproveite o melhor da viagem.
+          Seja a negócios ou lazer, a família D'Alvia Vicente cuida do seu transporte para que você aproveite o melhor da viagem.
         </p>
       </div>
 
