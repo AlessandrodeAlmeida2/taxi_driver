@@ -3,7 +3,7 @@ import { MapPin, Wine, Coffee } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden py-28 md:py-0">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -14,7 +14,8 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/30"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
+      {/* Content Container - Z-index increased to 20 to ensure it sits above the bottom fade */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
         <div className="md:w-2/3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/20 border border-primary-400/30 text-primary-300 text-sm font-medium mb-6 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
@@ -55,8 +56,8 @@ export const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Decorative bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-50 to-transparent z-10"></div>
+      {/* Decorative bottom fade - Z-index 10 (below content) */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-50 to-transparent z-10 pointer-events-none"></div>
     </div>
   );
 };
