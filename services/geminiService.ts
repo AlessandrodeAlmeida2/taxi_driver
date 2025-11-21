@@ -60,6 +60,6 @@ export const sendMessageToAssistant = async (message: string): Promise<string> =
     return result.text || "Desculpe, não consegui processar sua resposta agora.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "Desculpe, estou tendo dificuldades de conexão no momento. Verifique se a chave de API está configurada ou nos chame no WhatsApp!";
+    return "Desculpe, estou tendo dificuldades de conexão no momento. Nos chame no WhatsApp!";
   }
 };
