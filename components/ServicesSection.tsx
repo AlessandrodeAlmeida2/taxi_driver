@@ -36,7 +36,7 @@ const services: ServiceItem[] = [
       "Te levamos às melhores experiências, incluindo a famosa culinária italiana e restaurantes da região.",
     icon: <Utensils size={32} className="text-primary-600" />,
     // Imagem substituída: Restaurante rústico com parede de tijolos/adega
-    imageUrl: "img/fotos-o-restaurante-4.jpg",
+    imageUrl: "/img/fotos-o-restaurante-4.jpg",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const services: ServiceItem[] = [
       "Conheça os principais pontos turísticos, igrejas históricas e a beleza arquitetônica de Espírito Santo do Pinhal.",
     icon: <Map size={32} className="text-primary-600" />,
     // Imagem substituída: Fonte iluminada à noite em praça
-    imageUrl: "img/HDR_Sem Título8.jpg",
+    imageUrl: "/img/city-tour-noturno.jpg",
   },
   {
     id: 6,
