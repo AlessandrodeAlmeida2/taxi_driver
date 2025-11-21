@@ -54,8 +54,7 @@ const services: ServiceItem[] = [
       "Conforto total para viagens saindo de Pinhal para cidades vizinhas ou capitais. Preços fechados e competitivos.",
     icon: <Building2 size={32} className="text-primary-600" />,
     // Imagem substituída: Estrada cênica/encantadora
-    imageUrl:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/img/estrada.jpg",
   },
 ];
 
