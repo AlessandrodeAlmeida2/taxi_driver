@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
             Tradição familiar a serviço do seu conforto
           </h2>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            Há mais de 20 anos nas estradas da Serra da Mantiqueira, a Família D'Alvia Vicente construiu uma reputação sólida baseada na confiança. Não somos apenas um aplicativo anônimo; somos profissionais dedicados que conhecem cada curva da estrada e cada história local.
+            Há mais de 20 anos nas estradas da Serra dos Encontros, a Família D'Alvia Vicente construiu uma reputação sólida baseada na confiança. Não somos apenas um aplicativo anônimo; somos profissionais dedicados que conhecem cada curva da estrada e cada história local.
           </p>
 
           <div className="space-y-6">

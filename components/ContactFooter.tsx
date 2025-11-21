@@ -35,7 +35,7 @@ export const ContactFooter: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-primary-500">Fale Conosco</h2>
             <p className="text-slate-400 mb-8 text-lg">
-              Estamos prontos para atendê-lo. Entre em contato para agendamentos, orçamentos ou dúvidas sobre nossos roteiros na Mantiqueira.
+              Estamos prontos para atendê-lo. Entre em contato para agendamentos, orçamentos ou dúvidas sobre nossos roteiros na Serra dos Encontros.
             </p>
             
             <div className="space-y-6">

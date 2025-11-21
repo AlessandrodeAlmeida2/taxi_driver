@@ -9,7 +9,7 @@ export const GeminiPlanner: React.FC = () => {
     {
       id: 'welcome',
       role: 'model',
-      text: 'Olá! Eu sou o assistente virtual da Família D\'Alvia Vicente. Posso sugerir roteiros de vinhos, cafés ou passeios por Espírito Santo do Pinhal. Como posso ajudar?'
+      text: 'Olá! Eu sou o assistente virtual da Família D\'Alvia Vicente. Posso sugerir roteiros pelas vinícolas (como Guaspari e Mirantus), passeios de café ou tours pela cidade. Como posso ajudar?'
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ export const GeminiPlanner: React.FC = () => {
       const errorMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'model',
-        text: 'Desculpe, tive um problema técnico. Por favor, tente novamente ou chame no WhatsApp.',
+        text: 'Desculpe, estou tendo dificuldades de conexão no momento. Nos chame no WhatsApp!',
         isError: true
       };
       setMessages(prev => [...prev, errorMessage]);

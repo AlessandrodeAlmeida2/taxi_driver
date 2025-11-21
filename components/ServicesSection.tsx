@@ -29,6 +29,7 @@ const services: ServiceItem[] = [
     title: "Turismo Gastronômico",
     description: "Te levamos às melhores experiências, incluindo a famosa culinária italiana e restaurantes da região.",
     icon: <Utensils size={32} className="text-primary-600" />,
+    // Imagem substituída: Restaurante rústico com parede de tijolos/adega
     imageUrl: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop"
   },
   {
@@ -36,14 +37,16 @@ const services: ServiceItem[] = [
     title: "City Tour Pinhal",
     description: "Conheça os principais pontos turísticos, igrejas históricas e a beleza arquitetônica de Espírito Santo do Pinhal.",
     icon: <Map size={32} className="text-primary-600" />,
-    imageUrl: "https://picsum.photos/seed/city/600/400"
+    // Imagem substituída: Fonte iluminada à noite em praça
+    imageUrl: "https://images.unsplash.com/photo-1570569695183-19c18e491382?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 6,
     title: "Viagens Intermunicipais",
     description: "Conforto total para viagens saindo de Pinhal para cidades vizinhas ou capitais. Preços fechados e competitivos.",
     icon: <Building2 size={32} className="text-primary-600" />,
-    imageUrl: "https://picsum.photos/seed/highway/600/400"
+    // Imagem substituída: Estrada cênica/encantadora
+    imageUrl: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
