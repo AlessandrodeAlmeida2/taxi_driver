@@ -1,63 +1,105 @@
 import React from 'react';
-import { MapPin, Wine, Coffee } from 'lucide-react';
+import { MapPin, Wine, Coffee, ArrowRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden py-28 md:py-0">
+    <div className="relative min-h-[90vh] md:min-h-[700px] flex items-center justify-center overflow-hidden py-28 md:py-0">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop" 
           alt="Vista da Serra em Espírito Santo do Pinhal" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 animate-[pulse_10s_ease-in-out_infinite]"
+          style={{ animationDuration: '30s' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-90"></div>
       </div>
 
-      {/* Content Container - Z-index increased to 20 to ensure it sits above the bottom fade */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
-        <div className="md:w-2/3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/20 border border-primary-400/30 text-primary-300 text-sm font-medium mb-6 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
-            </span>
-            Disponível 24h para agendamentos
-          </div>
+      {/* Content Container */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
-            Explore Espírito Santo do Pinhal com a<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200">
-              Família D'Alvia Vicente
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl font-light leading-relaxed shadow-black/50 drop-shadow-md">
-            Experiências exclusivas nas melhores vinícolas, fazendas de café centenárias e turismo gastronômico da Toscana Paulista.
-          </p>
+          <div className="md:w-3/5 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-200 text-sm font-semibold mb-8 backdrop-blur-md shadow-lg shadow-primary-900/20">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Disponível 24h para agendamentos
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+              A Essência da<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-primary-200 to-primary-400">
+                Serra dos Encontros
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light leading-relaxed">
+              Viaje com a segurança e a hospitalidade da <strong>Família D'Alvia Vicente</strong>. Especialistas em rotas de vinhos, cafés especiais e turismo executivo na Toscana Paulista.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a 
-              href="#contact"
-              className="px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-bold text-lg shadow-lg hover:shadow-primary-500/40 transition-all flex items-center justify-center gap-2"
-            >
-              <MapPin size={20} />
-              Agendar Passeio
-            </a>
-            <a 
-              href="#planner"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-bold text-lg backdrop-blur-sm transition-all flex items-center justify-center gap-2"
-            >
-              <Wine size={20} />
-              <Coffee size={20} />
-              Montar Roteiro
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a 
+                href="#contact"
+                className="group px-8 py-4 bg-primary-500 hover:bg-primary-400 text-slate-900 rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(252,164,11,0.3)] hover:shadow-[0_0_30px_rgba(252,164,11,0.5)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3"
+              >
+                <MapPin size={20} className="group-hover:animate-bounce" />
+                Agendar Táxi
+              </a>
+              <a 
+                href="#planner"
+                className="group px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/30 rounded-xl font-semibold text-lg backdrop-blur-sm transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3"
+              >
+                <span className="flex items-center gap-1">
+                  <Wine size={18} />
+                  <Coffee size={18} />
+                </span>
+                Roteiros Turísticos
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
+
+          {/* Floating Feature Cards (Desktop) */}
+          <div className="hidden md:block md:w-2/5 relative">
+            <div className="grid grid-cols-1 gap-4">
+              <div className="bg-slate-800/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 transform hover:scale-105 transition-transform duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary-500/20 rounded-lg text-primary-400">
+                    <Wine size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold">Enoturismo VIP</h3>
+                    <p className="text-slate-400 text-sm">Guaspari, Casa Geraldo e mais</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 transform hover:scale-105 transition-transform duration-300 ml-8">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary-500/20 rounded-lg text-primary-400">
+                    <Coffee size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold">Rota do Café</h3>
+                    <p className="text-slate-400 text-sm">Fazendas históricas e degustação</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       
-      {/* Decorative bottom fade - Z-index 10 (below content) */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-50 to-transparent z-10 pointer-events-none"></div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce text-white/50">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-white/50 rounded-full mt-2"></div>
+        </div>
+      </div>
     </div>
   );
 };
