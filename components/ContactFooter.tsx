@@ -66,7 +66,7 @@ export const ContactFooter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white">Email</h4>
-                  <p className="text-slate-300 mt-1">contato@dalviavicente.com.br</p>
+                  <p className="text-slate-300 mt-1">agostini55@hotmail.com</p>
                 </div>
               </div>
 

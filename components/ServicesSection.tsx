@@ -29,21 +29,24 @@ const services: ServiceItem[] = [
     title: "Turismo Gastronômico",
     description: "Te levamos às melhores experiências, incluindo a famosa culinária italiana e restaurantes da região.",
     icon: <Utensils size={28} className="text-white" />,
-    imageUrl: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop"
+    // Imagem do restaurante (tijolinhos)
+    imageUrl: "./img/gastronomia.jpg"
   },
   {
     id: 5,
     title: "City Tour Pinhal",
     description: "Conheça os principais pontos turísticos, igrejas históricas e a beleza arquitetônica de Espírito Santo do Pinhal.",
     icon: <Map size={28} className="text-white" />,
-    imageUrl: "https://images.unsplash.com/photo-1596423733638-34440632292f?q=80&w=800&auto=format&fit=crop"
+    // Imagem da praça/igreja à noite
+    imageUrl: "./img/city_tour.jpg"
   },
   {
     id: 6,
     title: "Viagens Executivas",
     description: "Conforto total para viagens saindo de Pinhal para cidades vizinhas ou capitais. Carros sedã e minivans disponíveis.",
     icon: <Building2 size={28} className="text-white" />,
-    imageUrl: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop"
+    // Imagem da estrada/vinhedo
+    imageUrl: "./img/viagem_executiva.jpg"
   }
 ];
 
@@ -74,8 +77,11 @@ export const ServicesSection: React.FC = () => {
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.onerror = null; 
-                  target.src = "https://images.unsplash.com/photo-1532935296431-40e6d0431138?q=80&w=800&auto=format&fit=crop";
+                  // Fallback para imagens online caso o arquivo local não seja encontrado
+                  if (service.id === 4) target.src = "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800";
+                  else if (service.id === 5) target.src = "https://images.unsplash.com/photo-1596423733638-34440632292f?q=80&w=800";
+                  else if (service.id === 6) target.src = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800";
+                  else target.src = "https://images.unsplash.com/photo-1532935296431-40e6d0431138?q=80&w=800";
                 }}
               />
               <div className="absolute top-4 right-4 bg-primary-500 p-3 rounded-2xl shadow-lg z-20 shadow-primary-500/20 transform group-hover:rotate-6 transition-transform">
