@@ -17,10 +17,10 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left flex md:justify-center">
-        <div className="flex flex-col items-center justify-center gap-12 max-w-4xl mx-auto">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           
-          <div className="text-center">
+          <div className="md:w-3/4 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-200 text-sm font-semibold mb-8 backdrop-blur-md shadow-lg shadow-primary-900/20">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -36,27 +36,27 @@ export const Hero: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light leading-relaxed md:mx-0 mx-auto">
               Viaje com a segurança e a hospitalidade da <strong>Família D'Alvia Vicente</strong>. Especialistas em rotas de vinhos, cafés especiais e turismo executivo na Toscana Paulista.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a 
                 href="#contact"
-                className="group px-8 py-4 bg-primary-500 hover:bg-primary-400 text-slate-900 rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(252,164,11,0.3)] hover:shadow-[0_0_30px_rgba(252,164,11,0.5)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3"
+                className="group w-full sm:w-auto min-w-[200px] px-8 py-4 bg-primary-500 hover:bg-primary-400 text-slate-900 rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(252,164,11,0.3)] hover:shadow-[0_0_30px_rgba(252,164,11,0.5)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3"
               >
                 <MapPin size={20} className="group-hover:animate-bounce" />
                 Agendar Táxi
               </a>
               <a 
                 href="#planner"
-                className="group px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/30 rounded-xl font-semibold text-lg backdrop-blur-sm transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3"
+                className="group w-full sm:w-auto min-w-[200px] px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/30 rounded-xl font-bold text-lg backdrop-blur-sm transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3"
               >
                 <span className="flex items-center gap-1">
                   <Wine size={18} />
                   <Coffee size={18} />
                 </span>
-                Roteiros Turísticos
+                Roteiros
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
