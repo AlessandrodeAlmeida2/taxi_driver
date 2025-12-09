@@ -1,59 +1,43 @@
-import React, { useState } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Instagram,
-  MessageCircle,
-} from "lucide-react";
+import React, { useState } from 'react';
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 export const ContactFooter: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    service: "Transfer",
-    message: "",
+    name: '',
+    phone: '',
+    service: 'Transfer',
+    message: ''
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     // Format the message for WhatsApp
     const text = `Olá, meu nome é ${formData.name}. Gostaria de informações sobre ${formData.service}. Mensagem: ${formData.message}`;
-
+    
     // Target number: (19) 99194-4137 -> 5519991944137
     const phoneNumber = "5519991944137";
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      text
-    )}`;
-    window.open(whatsappUrl, "_blank");
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
     <footer className="bg-secondary-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          
           {/* Contact Info */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 text-primary-500">
-              Fale Conosco
-            </h2>
+            <h2 className="text-3xl font-bold mb-6 text-primary-500">Fale Conosco</h2>
             <p className="text-slate-400 mb-8 text-lg">
-              Estamos prontos para atendê-lo. Entre em contato para
-              agendamentos, orçamentos ou dúvidas sobre nossos roteiros na Serra
-              dos Encontros.
+              Estamos prontos para atendê-lo. Entre em contato para agendamentos, orçamentos ou dúvidas sobre nossos roteiros na Serra dos Encontros.
             </p>
-
+            
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="bg-slate-800 p-3 rounded-lg text-primary-500">
@@ -61,22 +45,18 @@ export const ContactFooter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Telefone / WhatsApp</h4>
-                  <p className="text-slate-300 mt-1 font-mono text-lg">
-                    (19) 99194-4137
-                  </p>
-                  <p className="text-slate-400 text-sm">
-                    Atendimento 24h para emergências
-                  </p>
+                  <p className="text-slate-300 mt-1 font-mono text-lg">(19) 99194-4137</p>
+                  <p className="text-slate-400 text-sm">Atendimento 24h para emergências</p>
                 </div>
               </div>
-
+              
               <div className="flex items-start gap-4">
                 <div className="bg-slate-800 p-3 rounded-lg text-primary-500">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Email</h4>
-                  <p className="text-slate-300 mt-1">agostini55@gmail.com</p>
+                  <p className="text-slate-300 mt-1">contato@dalviavicente.com.br</p>
                 </div>
               </div>
 
@@ -86,24 +66,16 @@ export const ContactFooter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Ponto Base</h4>
-                  <p className="text-slate-300 mt-1">
-                    Espírito Santo do Pinhal e Região
-                  </p>
+                  <p className="text-slate-300 mt-1">Espírito Santo do Pinhal e Região</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-10 flex gap-4">
-              <a
-                href="#"
-                className="bg-slate-800 p-3 rounded-full hover:bg-primary-600 hover:text-white transition-colors text-slate-400"
-              >
+              <a href="#" className="bg-slate-800 p-3 rounded-full hover:bg-primary-600 hover:text-white transition-colors text-slate-400">
                 <Facebook size={20} />
               </a>
-              <a
-                href="#"
-                className="bg-slate-800 p-3 rounded-full hover:bg-primary-600 hover:text-white transition-colors text-slate-400"
-              >
+              <a href="#" className="bg-slate-800 p-3 rounded-full hover:bg-primary-600 hover:text-white transition-colors text-slate-400">
                 <Instagram size={20} />
               </a>
             </div>
@@ -111,17 +83,10 @@ export const ContactFooter: React.FC = () => {
 
           {/* Form */}
           <div className="bg-slate-800 p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-semibold mb-6">
-              Solicitar Orçamento Rápido
-            </h3>
+            <h3 className="text-2xl font-semibold mb-6">Solicitar Orçamento Rápido</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-slate-400 mb-1"
-                >
-                  Nome
-                </label>
+                <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-1">Nome</label>
                 <input
                   type="text"
                   id="name"
@@ -133,14 +98,9 @@ export const ContactFooter: React.FC = () => {
                   placeholder="Seu nome completo"
                 />
               </div>
-
+              
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-slate-400 mb-1"
-                >
-                  WhatsApp
-                </label>
+                <label htmlFor="phone" className="block text-sm font-medium text-slate-400 mb-1">WhatsApp</label>
                 <input
                   type="tel"
                   id="phone"
@@ -154,12 +114,7 @@ export const ContactFooter: React.FC = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="service"
-                  className="block text-sm font-medium text-slate-400 mb-1"
-                >
-                  Serviço de Interesse
-                </label>
+                <label htmlFor="service" className="block text-sm font-medium text-slate-400 mb-1">Serviço de Interesse</label>
                 <select
                   id="service"
                   name="service"
@@ -177,12 +132,7 @@ export const ContactFooter: React.FC = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-slate-400 mb-1"
-                >
-                  Detalhes (Data, Horário, Nº Pessoas)
-                </label>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-1">Detalhes (Data, Horário, Nº Pessoas)</label>
                 <textarea
                   id="message"
                   name="message"
@@ -206,10 +156,7 @@ export const ContactFooter: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} D'Alvia Vicente Táxi & Turismo.
-            Todos os direitos reservados.
-          </p>
+          <p>&copy; {new Date().getFullYear()} D'Alvia Vicente Táxi & Turismo. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
