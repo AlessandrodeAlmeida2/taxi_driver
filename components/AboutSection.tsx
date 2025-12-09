@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ShieldCheck, Heart, Clock } from 'lucide-react';
 
@@ -9,7 +10,8 @@ export const AboutSection: React.FC = () => {
           <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary-200 rounded-full opacity-50 blur-xl"></div>
           <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary-900/10 rounded-full opacity-50 blur-xl"></div>
           <img 
-            src="https://picsum.photos/seed/driver/800/1000" 
+            // Imagem atualizada para um motorista profissional
+            src="https://images.unsplash.com/photo-1600320254374-ce2d293c324e?q=80&w=800&auto=format&fit=crop" 
             alt="Motorista da Família D'Alvia Vicente" 
             className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]"
           />
